@@ -16,15 +16,20 @@ export class BeerAccordionComponent implements OnInit, OnDestroy {
   constructor(private readonly punkBeerService: PunkBeerService) { }
 
   ngOnInit(): void {
-    this.allBeersSub = this.punkBeerService.fetchBeers().subscribe((beer) => {
-      //
-    },
-    (error) => {
-      this.beers = [];
-    })
+    this.allBeersSub = this.punkBeerService.fetchBeers().subscribe(
+      {
+        next: (v) => {},
+        error: (e) => this.beers = [],
+      }
+    )
   }
 
   ngOnDestroy() {
     this.allBeersSub.unsubscribe();
+  }
+
+  onSelectBeer(index: number) : void {
+    const activeAccordionSection = document.getElementById(`${index}`);
+    activeAccordionSection?.classList.toggle('active');
   }
 }

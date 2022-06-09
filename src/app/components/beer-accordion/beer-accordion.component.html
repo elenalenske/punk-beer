@@ -1,3 +1,24 @@
-<div *ngFor="let beer of beers">
-    Beer: {{ beer.name }}
+<div class="accordion">
+    <div
+        *ngFor="let beer of beers; let i = index"
+        [id]="i"
+        class="container"
+    >
+        <div class="label" (click)="onSelectBeer(i)">Beer: {{ beer.name }}</div>
+        <div class="content">
+            <div>
+                <img [src]="beer.image_url" />
+            </div>
+            <div>
+                <div>Abv: {{ beer.abv }}</div>
+                <div>First brewed: {{ beer.first_brewed }}</div>
+                <div >Food pairing:</div>
+                <div class="food-pairing">
+                    <div *ngFor="let pairing of beer.food_pairing">
+                        - {{ pairing }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

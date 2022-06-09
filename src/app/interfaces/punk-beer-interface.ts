@@ -59,4 +59,5 @@ export interface Beer {
         value: number;
         unit: string;
     };
+    active?: boolean;
 }
