@@ -8,6 +8,7 @@ import { Beer } from 'src/app/interfaces/punk-beer-interface';
 })
 export class BeerAccordionComponent implements OnInit {
   @Input() beers: Beer[] = [];
+  
   isSomeBeerExpanded = false;
 
   constructor() {}
@@ -22,6 +23,7 @@ export class BeerAccordionComponent implements OnInit {
     }
   }
 
+  // Accordion section expansion toggling
   onSelectBeer(index: number) : void {
     const activeAccordionSection = document.getElementById(`${index}`);
     activeAccordionSection?.classList.toggle('active');

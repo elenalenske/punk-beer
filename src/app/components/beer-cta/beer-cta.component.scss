@@ -1,0 +1,129 @@
+@import 'src/app/styles/variables';
+@import 'src/app/styles/mixins';
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+    @include sorting-s;
+
+    .cta-item {
+        @include image-xs;
+        height: 300px;
+        width: 300px;
+    }
+}
+ 
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    @include sorting-s;
+
+    .cta-item {
+        @include image-s;
+        height: 250px;
+        width: 250px;
+    }
+}
+ 
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) and (max-width: 888px) {
+    .cta-item {
+        @include image-l-m;
+        height: 200px;
+        width: 250px;
+    }
+}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) and (max-width: 1199px) {
+    .cta-item {
+        @include image-l-m;
+        height: 200px;
+        width: 200px;
+    }
+}
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+    .cta-item {
+        @include image-xl;
+        height: 140px;
+        width: 140px;
+
+        .beer-name {
+            font-size: 16px !important;
+        }
+    }
+}
+
+/* Main styling non-dependant on screen size */
+.sort-container {
+    @include row-center;
+    margin-top: 50px;
+    padding: 10px;
+    color: $very-peri-darkest;
+    font-size: 18px;
+    background-color: $very-peri-lighter;
+
+    input {
+        margin-left: 20px;
+    }
+}
+
+.cta-container {
+    @include row-center;
+    margin-top: 10px;
+
+    .cta-item {
+        background-color: $very-peri-darkest;
+        margin: 5px;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $very-peri-darker;
+            
+            .content {
+                color: $very-peri-lighter;
+
+                .see-more-button {
+                    cursor: pointer;
+                    background: $very-peri-darkest;
+                    border: 2px solid $very-peri-darkest;
+                }
+            }
+        }
+
+        .beer-name {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 20px;
+            margin: 5px;
+            color: $very-peri-lighter;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .content {
+            display: flex;
+            color: $very-peri-light;
+            font-size: 18px;
+
+            img {
+                margin: 10px;
+            }
+
+            .inner-content {
+                margin: 10px 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+            }
+
+            .see-more-button {
+                @include button-styling;
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

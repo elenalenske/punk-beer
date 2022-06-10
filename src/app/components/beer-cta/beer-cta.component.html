@@ -1,0 +1,27 @@
+<div class="sort-container">
+    <div class="sorting-title">Sort beers by:</div>
+    <div *ngFor="let option of sortingOptions" class="sorting-options">
+        <input
+            type="radio"
+            name="sorting"
+            value="option"
+            [checked]="option.value === 'name'"
+            (click)="onSortingSelection(option.value)"
+        />{{ option.name }}
+    </div>  
+</div>
+
+<div class="cta-container">
+    <div *ngFor="let beer of updatedBeers" class="cta-item">
+        <div class="beer-name">{{ beer.name }}</div>
+        <div class="content">
+            <div>
+                <img [src]="beer.image_url" />
+            </div>
+            <div class="inner-content">
+                <div>Abv: {{ beer.abv }}</div>
+                <button class="see-more-button">See more</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,14 +23,14 @@ export interface Beer {
             };
             attribute: string;
             name: string;
-        };
+        }[];
         malt: {
             amount: {
                 value: number;
                 unit: string;
             };
             name: string;
-        };
+        }[];
         yeast: string;
     }
     method: {

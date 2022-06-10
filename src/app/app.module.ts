@@ -8,11 +8,13 @@ import { EffectsModule } from '@ngrx/effects';
 import { BeerAccordionComponent } from './components/beer-accordion/beer-accordion.component';
 import * as fromFeature from './store';
 import { HttpClientModule } from '@angular/common/http';
+import { BeerCtaComponent } from './components/beer-cta/beer-cta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeerAccordionComponent
+    BeerAccordionComponent,
+    BeerCtaComponent
   ],
   imports: [
     BrowserModule,

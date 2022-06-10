@@ -2,7 +2,14 @@
 @import 'src/app/styles/mixins';
 
 .accordion {
-    @include holder;
+    background-color: $very-peri-darker;
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 5px;
+    box-shadow: 0 12px 8px $very-peri;
+    max-height: 500px;
+    max-width: 365px;
+    overflow-y: auto;
 
     .container {
         position: relative;

@@ -1,13 +1,3 @@
-@mixin holder {
-    background-color: $very-peri-darker;
-    border-radius: 10px;
-    margin: 0 5px;
-    box-shadow: 0 12px 8px $very-peri;
-    max-height: 500px;
-    max-width: 365px;
-    overflow-y: auto;
-}
-
 @mixin button-styling {
     color: $very-peri-light;
     background-color: $very-peri-dark;
@@ -23,5 +13,76 @@
         cursor: pointer;
         background: $very-peri-darkest;
         border: 2px solid $very-peri-darkest;
+    }
+}
+
+@mixin row-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin sorting-s {
+    .sort-container {
+        flex-direction: column !important;
+        align-items: center !important;
+
+        .sorting-title, .sorting-options {
+            width: 250px;
+        }
+
+        .sorting-title {
+            margin-left: 40px;
+        }
+    }
+}
+
+@mixin image-xl {
+    .content {
+
+        img {
+            max-height: 100px;
+            min-height: 100px;
+            max-width: 30px;
+        }
+
+        .see-more-button {
+            margin-bottom: 10px !important;
+        }
+    }
+}
+
+@mixin image-l-m {
+    .content {
+            
+        img {
+            max-height: 150px;
+            min-height: 150px;
+            max-width: 50px;
+        }
+    }
+}
+
+@mixin image-s {
+    .content {
+            
+        img {
+            max-height: 200px;
+            min-height: 200px;
+            max-width: 100px;
+        }
+    }
+}
+
+@mixin image-xs {
+    .content {
+            
+        img {
+            max-height: 250px;
+            min-height: 250px;
+            max-width: 100px;
+        }
     }
 }
