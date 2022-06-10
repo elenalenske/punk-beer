@@ -78,3 +78,7 @@
         }
     }
 }
+
+.close-button {
+    @include button-styling;
+}

@@ -12,7 +12,7 @@
             <div>
                 <div>Abv: {{ beer.abv }}</div>
                 <div>First brewed: {{ beer.first_brewed }}</div>
-                <div >Food pairing:</div>
+                <div>Food pairing:</div>
                 <div class="food-pairing">
                     <div *ngFor="let pairing of beer.food_pairing">
                         - {{ pairing }}
@@ -22,3 +22,11 @@
         </div>
     </div>
 </div>
+
+<button
+    *ngIf="isSomeBeerExpanded"
+    class="close-button"
+    (click)="onCloseAllExpandedBeers()"
+>
+    Close all beers
+</button>

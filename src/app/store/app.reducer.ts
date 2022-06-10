@@ -14,7 +14,7 @@ export const reducer = createReducer(
   initialState,
   on(AppActions.loadBeersSuccess, (state, { data }) => ({
     ...state,
-    beers: data.slice(0, 8),
+    beers: data,
   })),
   on(AppActions.loadBeersFail, (state) => ({
     ...state,
