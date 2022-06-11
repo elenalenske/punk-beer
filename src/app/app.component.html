@@ -1,6 +1,7 @@
 <div class="app-container">
   <div class="app-title">
-    <p>Punk Beer</p>
+    <p class="title">Punk Beer</p>
+    <p class="version">Version: {{ version }}</p>
   </div>
   <app-beer-accordion
     [beers]="beers$ | async"

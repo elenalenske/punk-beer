@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppActionsService } from './store/app-actions.service';
 import * as fromFeature from './store';
-import { Beer } from './interfaces/punk-beer-interface';
+import { environment } from '../environments/environment.staging';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,8 @@ import { Beer } from './interfaces/punk-beer-interface';
 })
 export class AppComponent implements OnInit {
   beers$: Observable<any>;
+
+  version!: string; // Our version
 
   constructor(
     private readonly storeService: AppActionsService,
@@ -21,5 +23,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.storeService.getBeers();
+
+    this.version = environment.version; // Consume the version number from environment
   }
 }
