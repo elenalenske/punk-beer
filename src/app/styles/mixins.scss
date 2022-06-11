@@ -1,3 +1,9 @@
+@mixin app-title {
+    display: flex;
+    justify-content: center;
+    color: $very-peri-darker;
+}
+
 @mixin button-styling {
     color: $very-peri-light;
     background-color: $very-peri-dark;
