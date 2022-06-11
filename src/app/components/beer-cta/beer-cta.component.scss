@@ -129,3 +129,8 @@
         }
     }
 }
+
+.loader {
+    @include row-center;
+    height: 500px;
+}

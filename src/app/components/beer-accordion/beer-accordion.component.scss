@@ -86,3 +86,8 @@
 .close-button {
     @include button-styling;
 }
+
+.loader {
+    @include row-center;
+    height: 500px;
+}
