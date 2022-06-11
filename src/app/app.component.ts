@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppActionsService } from './store/app-actions.service';
 import * as fromFeature from './store';
-import { environment } from '../environments/environment';
-import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast';
+import { environment } from '../environments/environment.staging';
 
 @Component({
   selector: 'app-root',
