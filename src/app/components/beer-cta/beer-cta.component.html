@@ -1,4 +1,8 @@
-<div class="sort-container">
+<div *ngIf="!beers">
+    ...loading
+</div>
+
+<div *ngIf="beers && beers.length" class="sort-container">
     <div class="sorting-title">Sort beers by:</div>
     <div *ngFor="let option of sortingOptions" class="sorting-options">
         <input
@@ -11,7 +15,7 @@
     </div>  
 </div>
 
-<div class="cta-container">
+<div *ngIf="beers && beers.length" class="cta-container">
     <div *ngFor="let beer of updatedBeers" class="cta-item">
         <div class="beer-name">{{ beer.name }}</div>
         <div class="content">

@@ -1,4 +1,8 @@
-<div class="accordion">
+<div *ngIf="!beers">
+    ...loading
+</div>
+
+<div *ngIf="beers && beers.length" class="accordion">
     <div
         *ngFor="let beer of beers; let i = index"
         [id]="i"

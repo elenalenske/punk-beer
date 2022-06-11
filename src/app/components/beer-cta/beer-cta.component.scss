@@ -76,9 +76,11 @@
         background-color: $very-peri-darkest;
         margin: 5px;
         border-radius: 10px;
+        box-shadow: 0 8px 8px $very-peri;
 
         &:hover {
             background-color: $very-peri-darker;
+            box-shadow: 0 10px 4px $very-peri;
             
             .content {
                 color: $very-peri-lighter;
