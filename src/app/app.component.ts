@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { AppActionsService } from './store/app-actions.service';
 import * as fromFeature from './store';
 import { environment } from '../environments/environment.staging';
+import { Beer } from './interfaces/punk-beer-interface';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { environment } from '../environments/environment.staging';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  beers$: Observable<any>;
+  beers$: Observable<Beer[]>;
 
   version!: string; // Our version
 
